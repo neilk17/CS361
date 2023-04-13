@@ -1,0 +1,123 @@
+\hypertarget{class_leader_board}{}\doxysection{Leader\+Board Class Reference}
+\label{class_leader_board}\index{LeaderBoard@{LeaderBoard}}
+
+
+{\ttfamily \#include $<$leaderboard.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_leader_board_a0a9fbc009e27618fa89630593ee19503}{Leader\+Board}} (int num\+Racers)
+\item 
+\mbox{\hyperlink{class_leader_board_a135eac07151d1aadaba6f49226e1832c}{$\sim$\+Leader\+Board}} ()
+\item 
+void \mbox{\hyperlink{class_leader_board_a0d496bf804283c8d91379667f395e7fb}{add\+Racer}} (std\+::thread\+::id me)
+\item 
+bool \mbox{\hyperlink{class_leader_board_ab681392e4a94b982e3d389e7f0110156}{race\+Finished}} ()
+\item 
+std\+::thread\+::id \mbox{\hyperlink{class_leader_board_aa53f0751cb5064c69cbd6017103b3481}{get\+Place}} (int i)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_leader_board_a579f7863d33534648b91d13e5a4efab9}{racers}}
+\item 
+std\+::thread\+::id $\ast$ \mbox{\hyperlink{class_leader_board_a9f61db0d3e45ba9e0a23bd760ad9365c}{results}}
+\item 
+int \mbox{\hyperlink{class_leader_board_a513623ab13a9b44b9945a656c0e8996a}{current}}
+\item 
+\mbox{\hyperlink{classsemaphore}{semaphore}} $\ast$ \mbox{\hyperlink{class_leader_board_aef14654950668ff75909a13599a008f6}{s}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_leader_board}{Leader\+Board}} records which order the threads finish in. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_leader_board_a0a9fbc009e27618fa89630593ee19503}\label{class_leader_board_a0a9fbc009e27618fa89630593ee19503}} 
+\index{LeaderBoard@{LeaderBoard}!LeaderBoard@{LeaderBoard}}
+\index{LeaderBoard@{LeaderBoard}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{LeaderBoard()}{LeaderBoard()}}
+{\footnotesize\ttfamily Leader\+Board\+::\+Leader\+Board (\begin{DoxyParamCaption}\item[{int}]{num\+Racers }\end{DoxyParamCaption})}
+
+Create a new Leader Board with given number of spaces 
+\begin{DoxyParams}{Parameters}
+{\em num\+Racers} & is the total number of racers playing \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_leader_board_a135eac07151d1aadaba6f49226e1832c}\label{class_leader_board_a135eac07151d1aadaba6f49226e1832c}} 
+\index{LeaderBoard@{LeaderBoard}!````~LeaderBoard@{$\sim$LeaderBoard}}
+\index{````~LeaderBoard@{$\sim$LeaderBoard}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{$\sim$LeaderBoard()}{~LeaderBoard()}}
+{\footnotesize\ttfamily Leader\+Board\+::$\sim$\+Leader\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Free the class from memory 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_leader_board_a0d496bf804283c8d91379667f395e7fb}\label{class_leader_board_a0d496bf804283c8d91379667f395e7fb}} 
+\index{LeaderBoard@{LeaderBoard}!addRacer@{addRacer}}
+\index{addRacer@{addRacer}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{addRacer()}{addRacer()}}
+{\footnotesize\ttfamily void Leader\+Board\+::add\+Racer (\begin{DoxyParamCaption}\item[{std\+::thread\+::id}]{me }\end{DoxyParamCaption})}
+
+Add a racer to the leaderboard. Position is determined automatically. 
+\begin{DoxyParams}{Parameters}
+{\em me} & is the ID of the thread that just finished \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_leader_board_aa53f0751cb5064c69cbd6017103b3481}\label{class_leader_board_aa53f0751cb5064c69cbd6017103b3481}} 
+\index{LeaderBoard@{LeaderBoard}!getPlace@{getPlace}}
+\index{getPlace@{getPlace}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{getPlace()}{getPlace()}}
+{\footnotesize\ttfamily std\+::thread\+::id Leader\+Board\+::get\+Place (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption})}
+
+Find out which thread crossed the finish line in position i. 
+\begin{DoxyParams}{Parameters}
+{\em i} & is the position to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The thread ID of the racer in that position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_leader_board_ab681392e4a94b982e3d389e7f0110156}\label{class_leader_board_ab681392e4a94b982e3d389e7f0110156}} 
+\index{LeaderBoard@{LeaderBoard}!raceFinished@{raceFinished}}
+\index{raceFinished@{raceFinished}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{raceFinished()}{raceFinished()}}
+{\footnotesize\ttfamily bool Leader\+Board\+::race\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine if the race is finished \begin{DoxyReturn}{Returns}
+True if all racers have crossed the finish line 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_leader_board_a513623ab13a9b44b9945a656c0e8996a}\label{class_leader_board_a513623ab13a9b44b9945a656c0e8996a}} 
+\index{LeaderBoard@{LeaderBoard}!current@{current}}
+\index{current@{current}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{current}{current}}
+{\footnotesize\ttfamily int Leader\+Board\+::current\hspace{0.3cm}{\ttfamily [private]}}
+
+position of next racer to finish \mbox{\Hypertarget{class_leader_board_a579f7863d33534648b91d13e5a4efab9}\label{class_leader_board_a579f7863d33534648b91d13e5a4efab9}} 
+\index{LeaderBoard@{LeaderBoard}!racers@{racers}}
+\index{racers@{racers}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{racers}{racers}}
+{\footnotesize\ttfamily int Leader\+Board\+::racers\hspace{0.3cm}{\ttfamily [private]}}
+
+number of racers playing \mbox{\Hypertarget{class_leader_board_a9f61db0d3e45ba9e0a23bd760ad9365c}\label{class_leader_board_a9f61db0d3e45ba9e0a23bd760ad9365c}} 
+\index{LeaderBoard@{LeaderBoard}!results@{results}}
+\index{results@{results}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{results}{results}}
+{\footnotesize\ttfamily std\+::thread\+::id$\ast$ Leader\+Board\+::results\hspace{0.3cm}{\ttfamily [private]}}
+
+Array to store results of race \mbox{\Hypertarget{class_leader_board_aef14654950668ff75909a13599a008f6}\label{class_leader_board_aef14654950668ff75909a13599a008f6}} 
+\index{LeaderBoard@{LeaderBoard}!s@{s}}
+\index{s@{s}!LeaderBoard@{LeaderBoard}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsemaphore}{semaphore}}$\ast$ Leader\+Board\+::s\hspace{0.3cm}{\ttfamily [private]}}
+
+Semaphore to protect the attributes 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{leaderboard_8h}{leaderboard.\+h}}\item 
+src/\mbox{\hyperlink{leaderboard_8cpp}{leaderboard.\+cpp}}\end{DoxyCompactItemize}

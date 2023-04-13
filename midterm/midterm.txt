@@ -1,0 +1,23 @@
+Neil Kanakia
+October 28, 2022
+CS361: Midterm
+
+# Question 1:
+
+a) 6 reflections
+b) 4 assignments
+c) I have attended all live lectures and watched others asynchronously
+d) Was confident about most homework answers when I submitted them
+
+# Question 2
+
+a) HW4 was the most insightful since it gave me the best understanding of how much of an improvement threads can offer.  
+
+b) Even though none of them were too bad HW3 was frustrating since even though most of the code was provided, I found it hard to debug my code.
+
+(It would have been better if HW4 was before HW3 since I would be more equipped to deal with the debugging aspect)
+
+c) If I had to resubmit my HWs it would be HW3 since I would want to make my code more robust and add colors to the set.
+
+
+# Question 3

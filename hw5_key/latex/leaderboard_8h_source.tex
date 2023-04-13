@@ -1,0 +1,28 @@
+\hypertarget{leaderboard_8h_source}{}\doxysection{leaderboard.\+h}
+\label{leaderboard_8h_source}\index{src/leaderboard.h@{src/leaderboard.h}}
+\mbox{\hyperlink{leaderboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifndef \_LEADER\_BOARD\_H\_}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define \_LEADER\_BOARD\_H\_}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}semaphore.h"{}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_leader_board}{LeaderBoard}}\{}
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_leader_board_a579f7863d33534648b91d13e5a4efab9}{racers}};}
+\DoxyCodeLine{21     std::thread::id* \mbox{\hyperlink{class_leader_board_a9f61db0d3e45ba9e0a23bd760ad9365c}{results}};}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_leader_board_a513623ab13a9b44b9945a656c0e8996a}{current}};}
+\DoxyCodeLine{23     \mbox{\hyperlink{classsemaphore}{semaphore}}* \mbox{\hyperlink{class_leader_board_aef14654950668ff75909a13599a008f6}{s}};}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_leader_board_a0a9fbc009e27618fa89630593ee19503}{LeaderBoard}}(\textcolor{keywordtype}{int} numRacers);}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_leader_board_a135eac07151d1aadaba6f49226e1832c}{\string~LeaderBoard}}();}
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_leader_board_a0d496bf804283c8d91379667f395e7fb}{addRacer}}(std::thread::id me);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_leader_board_ab681392e4a94b982e3d389e7f0110156}{raceFinished}}();}
+\DoxyCodeLine{49     std::thread::id \mbox{\hyperlink{class_leader_board_aa53f0751cb5064c69cbd6017103b3481}{getPlace}}(\textcolor{keywordtype}{int} i);}
+\DoxyCodeLine{50 \};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

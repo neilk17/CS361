@@ -1,0 +1,9 @@
+
+Mark Boady
+Drexel University 2021
+
+This is a solution to the Rendezvous problem from the little book of semaphores. It shows how locks and condition variables can be used to make a semaphore.
+
+To build and test
+
+make && make run

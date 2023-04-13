@@ -1,0 +1,26 @@
+\hypertarget{dicequeue_8h_source}{}\doxysection{dicequeue.\+h}
+\label{dicequeue_8h_source}\index{src/dicequeue.h@{src/dicequeue.h}}
+\mbox{\hyperlink{dicequeue_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifndef \_DICE\_QUEUE\_H\_}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#define \_DICE\_QUEUE\_H\_}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}semaphore.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_dice_queue}{DiceQueue}}\{}
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     std::queue<int>* \mbox{\hyperlink{class_dice_queue_a4f9c6e639312e82c120590b8eb055e22}{dice}};}
+\DoxyCodeLine{22     \mbox{\hyperlink{classsemaphore}{semaphore}}* \mbox{\hyperlink{class_dice_queue_a807d809e89df735b2fac5c15c551e5c1}{items}};}
+\DoxyCodeLine{23     \mbox{\hyperlink{classsemaphore}{semaphore}}* \mbox{\hyperlink{class_dice_queue_a82d0a32f911bd7eb7915510e3d0fdf90}{lock}};}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{28     \mbox{\hyperlink{class_dice_queue_aca1de3727d16bac4fdacf592fce730bd}{DiceQueue}}();}
+\DoxyCodeLine{32     \mbox{\hyperlink{class_dice_queue_a2c5c9ee71b4d912f5a37b652c220a5af}{\string~DiceQueue}}();}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dice_queue_a22043d79892d47da7b047cd5584837e9}{addDice}}(\textcolor{keywordtype}{int} d);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dice_queue_a4c80e2d04e599fb97b76b46aaab1dfc5}{getDice}}();}
+\DoxyCodeLine{43 \};}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

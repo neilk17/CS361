@@ -1,0 +1,94 @@
+\hypertarget{class_dice_queue}{}\doxysection{Dice\+Queue Class Reference}
+\label{class_dice_queue}\index{DiceQueue@{DiceQueue}}
+
+
+{\ttfamily \#include $<$dicequeue.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dice_queue_aca1de3727d16bac4fdacf592fce730bd}{Dice\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_dice_queue_a2c5c9ee71b4d912f5a37b652c220a5af}{$\sim$\+Dice\+Queue}} ()
+\item 
+void \mbox{\hyperlink{class_dice_queue_a22043d79892d47da7b047cd5584837e9}{add\+Dice}} (int d)
+\item 
+int \mbox{\hyperlink{class_dice_queue_a4c80e2d04e599fb97b76b46aaab1dfc5}{get\+Dice}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ int $>$ $\ast$ \mbox{\hyperlink{class_dice_queue_a4f9c6e639312e82c120590b8eb055e22}{dice}}
+\item 
+\mbox{\hyperlink{classsemaphore}{semaphore}} $\ast$ \mbox{\hyperlink{class_dice_queue_a807d809e89df735b2fac5c15c551e5c1}{items}}
+\item 
+\mbox{\hyperlink{classsemaphore}{semaphore}} $\ast$ \mbox{\hyperlink{class_dice_queue_a82d0a32f911bd7eb7915510e3d0fdf90}{lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implement a Queue using the Producer-\/\+Consumer Problem. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dice_queue_aca1de3727d16bac4fdacf592fce730bd}\label{class_dice_queue_aca1de3727d16bac4fdacf592fce730bd}} 
+\index{DiceQueue@{DiceQueue}!DiceQueue@{DiceQueue}}
+\index{DiceQueue@{DiceQueue}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{DiceQueue()}{DiceQueue()}}
+{\footnotesize\ttfamily Dice\+Queue\+::\+Dice\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create a new empty Queue. Set up semaphores correctly. \mbox{\Hypertarget{class_dice_queue_a2c5c9ee71b4d912f5a37b652c220a5af}\label{class_dice_queue_a2c5c9ee71b4d912f5a37b652c220a5af}} 
+\index{DiceQueue@{DiceQueue}!````~DiceQueue@{$\sim$DiceQueue}}
+\index{````~DiceQueue@{$\sim$DiceQueue}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{$\sim$DiceQueue()}{~DiceQueue()}}
+{\footnotesize\ttfamily Dice\+Queue\+::$\sim$\+Dice\+Queue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Delete all allocated objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dice_queue_a22043d79892d47da7b047cd5584837e9}\label{class_dice_queue_a22043d79892d47da7b047cd5584837e9}} 
+\index{DiceQueue@{DiceQueue}!addDice@{addDice}}
+\index{addDice@{addDice}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{addDice()}{addDice()}}
+{\footnotesize\ttfamily void Dice\+Queue\+::add\+Dice (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+Add a dice roll to the queue when it is safe to do so. 
+\begin{DoxyParams}{Parameters}
+{\em d} & is the dice roll to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dice_queue_a4c80e2d04e599fb97b76b46aaab1dfc5}\label{class_dice_queue_a4c80e2d04e599fb97b76b46aaab1dfc5}} 
+\index{DiceQueue@{DiceQueue}!getDice@{getDice}}
+\index{getDice@{getDice}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{getDice()}{getDice()}}
+{\footnotesize\ttfamily int Dice\+Queue\+::get\+Dice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get a dice roll or wait until one is available. \begin{DoxyReturn}{Returns}
+A roll of the dice 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dice_queue_a4f9c6e639312e82c120590b8eb055e22}\label{class_dice_queue_a4f9c6e639312e82c120590b8eb055e22}} 
+\index{DiceQueue@{DiceQueue}!dice@{dice}}
+\index{dice@{dice}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{dice}{dice}}
+{\footnotesize\ttfamily std\+::queue$<$int$>$$\ast$ Dice\+Queue\+::dice\hspace{0.3cm}{\ttfamily [private]}}
+
+The actual queeu of dice \mbox{\Hypertarget{class_dice_queue_a807d809e89df735b2fac5c15c551e5c1}\label{class_dice_queue_a807d809e89df735b2fac5c15c551e5c1}} 
+\index{DiceQueue@{DiceQueue}!items@{items}}
+\index{items@{items}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsemaphore}{semaphore}}$\ast$ Dice\+Queue\+::items\hspace{0.3cm}{\ttfamily [private]}}
+
+Semaphore to signal consumers that the producer has produced. \mbox{\Hypertarget{class_dice_queue_a82d0a32f911bd7eb7915510e3d0fdf90}\label{class_dice_queue_a82d0a32f911bd7eb7915510e3d0fdf90}} 
+\index{DiceQueue@{DiceQueue}!lock@{lock}}
+\index{lock@{lock}!DiceQueue@{DiceQueue}}
+\doxysubsubsection{\texorpdfstring{lock}{lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsemaphore}{semaphore}}$\ast$ Dice\+Queue\+::lock\hspace{0.3cm}{\ttfamily [private]}}
+
+Semaphore to protect the queue. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{dicequeue_8h}{dicequeue.\+h}}\item 
+src/\mbox{\hyperlink{dicequeue_8cpp}{dicequeue.\+cpp}}\end{DoxyCompactItemize}

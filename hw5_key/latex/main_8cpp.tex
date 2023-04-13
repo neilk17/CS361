@@ -1,0 +1,141 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}semaphore.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dicequeue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}leaderboard.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8cpp_a8c37e32d7e30459febf1b1968d43cd78}{check\+Pos\+Int}} (std\+::string text)
+\item 
+void \mbox{\hyperlink{main_8cpp_ac1f047e75326adf783c46b4c607e294b}{random\+Sleep}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_abbce6e8be2e0d887ce9e01542db81dd7}{start\+Message}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a4a74989f4936806101e4bc4026c7ef46}{move\+Message}} (int step)
+\item 
+void \mbox{\hyperlink{main_8cpp_ae908b39f5fc9ea789d0bfea25a63b7fb}{stop\+Message}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a5860ff1493dd3e21ef57f59acfb26bd2}{game\+Master}} (\mbox{\hyperlink{class_dice_queue}{Dice\+Queue}} $\ast$DQ, \mbox{\hyperlink{class_leader_board}{Leader\+Board}} $\ast$LB)
+\item 
+void \mbox{\hyperlink{main_8cpp_ab8c2b5fa202c3ada90ea3cfb4b32dae6}{racer}} (\mbox{\hyperlink{class_dice_queue}{Dice\+Queue}} $\ast$DQ, \mbox{\hyperlink{class_leader_board}{Leader\+Board}} $\ast$LB)
+\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::mutex \mbox{\hyperlink{main_8cpp_a8c9c2401696482a80b15c4dff94f24fe}{io\+Lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Mark Boady 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/2022 
+\end{DoxyDate}
+\hypertarget{index_Description}{}\doxysubsection{Description}\label{index_Description}
+Answer key example for Thread Race 2000 Homework 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a8c37e32d7e30459febf1b1968d43cd78}\label{main_8cpp_a8c37e32d7e30459febf1b1968d43cd78}} 
+\index{main.cpp@{main.cpp}!checkPosInt@{checkPosInt}}
+\index{checkPosInt@{checkPosInt}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{checkPosInt()}{checkPosInt()}}
+{\footnotesize\ttfamily bool check\+Pos\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{text }\end{DoxyParamCaption})}
+
+Check that a given string contains a positive integer 
+\begin{DoxyParams}{Parameters}
+{\em text} & is the string to examine \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the string is a positive integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a5860ff1493dd3e21ef57f59acfb26bd2}\label{main_8cpp_a5860ff1493dd3e21ef57f59acfb26bd2}} 
+\index{main.cpp@{main.cpp}!gameMaster@{gameMaster}}
+\index{gameMaster@{gameMaster}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{gameMaster()}{gameMaster()}}
+{\footnotesize\ttfamily void game\+Master (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dice_queue}{Dice\+Queue}} $\ast$}]{DQ,  }\item[{\mbox{\hyperlink{class_leader_board}{Leader\+Board}} $\ast$}]{LB }\end{DoxyParamCaption})}
+
+The Game Master thread rolls dice and adds them to a queue. It runs until the leader board is full. 
+\begin{DoxyParams}{Parameters}
+{\em DQ} & is a safe queue to put the dice into \\
+\hline
+{\em LB} & is a safe leaderboard to record results \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Create racers and game master. Simulate a game being played. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & must be 2 \\
+\hline
+{\em argv} & contains the number of racers in argv\mbox{[}1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success and 1 on error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a4a74989f4936806101e4bc4026c7ef46}\label{main_8cpp_a4a74989f4936806101e4bc4026c7ef46}} 
+\index{main.cpp@{main.cpp}!moveMessage@{moveMessage}}
+\index{moveMessage@{moveMessage}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{moveMessage()}{moveMessage()}}
+{\footnotesize\ttfamily void move\+Message (\begin{DoxyParamCaption}\item[{int}]{step }\end{DoxyParamCaption})}
+
+Print that a thread has moved forward 
+\begin{DoxyParams}{Parameters}
+{\em step} & is how far forward the thread moved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_ab8c2b5fa202c3ada90ea3cfb4b32dae6}\label{main_8cpp_ab8c2b5fa202c3ada90ea3cfb4b32dae6}} 
+\index{main.cpp@{main.cpp}!racer@{racer}}
+\index{racer@{racer}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{racer()}{racer()}}
+{\footnotesize\ttfamily void racer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_dice_queue}{Dice\+Queue}} $\ast$}]{DQ,  }\item[{\mbox{\hyperlink{class_leader_board}{Leader\+Board}} $\ast$}]{LB }\end{DoxyParamCaption})}
+
+The racer takes dice rolls until it has moved 20 spaces 
+\begin{DoxyParams}{Parameters}
+{\em DQ} & is a safe queue to read dice from \\
+\hline
+{\em LB} & is a safe leaderboard to record when I cross the finish line \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_ac1f047e75326adf783c46b4c607e294b}\label{main_8cpp_ac1f047e75326adf783c46b4c607e294b}} 
+\index{main.cpp@{main.cpp}!randomSleep@{randomSleep}}
+\index{randomSleep@{randomSleep}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{randomSleep()}{randomSleep()}}
+{\footnotesize\ttfamily void random\+Sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sleep thread for a random length of time between 0 and 2 seconds \mbox{\Hypertarget{main_8cpp_abbce6e8be2e0d887ce9e01542db81dd7}\label{main_8cpp_abbce6e8be2e0d887ce9e01542db81dd7}} 
+\index{main.cpp@{main.cpp}!startMessage@{startMessage}}
+\index{startMessage@{startMessage}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{startMessage()}{startMessage()}}
+{\footnotesize\ttfamily void start\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print that a thread has started \mbox{\Hypertarget{main_8cpp_ae908b39f5fc9ea789d0bfea25a63b7fb}\label{main_8cpp_ae908b39f5fc9ea789d0bfea25a63b7fb}} 
+\index{main.cpp@{main.cpp}!stopMessage@{stopMessage}}
+\index{stopMessage@{stopMessage}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{stopMessage()}{stopMessage()}}
+{\footnotesize\ttfamily void stop\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print that a thread has crossed the finish line 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8cpp_a8c9c2401696482a80b15c4dff94f24fe}\label{main_8cpp_a8c9c2401696482a80b15c4dff94f24fe}} 
+\index{main.cpp@{main.cpp}!ioLock@{ioLock}}
+\index{ioLock@{ioLock}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ioLock}{ioLock}}
+{\footnotesize\ttfamily std\+::mutex io\+Lock}
+
+Global Lock to Protect I/O 

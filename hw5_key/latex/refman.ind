@@ -1,0 +1,112 @@
+\begin{theindex}
+
+  \item {$\sim$DiceQueue}
+    \subitem {DiceQueue}, \hyperpage{7}
+  \item {$\sim$LeaderBoard}
+    \subitem {LeaderBoard}, \hyperpage{10}
+
+  \indexspace
+
+  \item {addDice}
+    \subitem {DiceQueue}, \hyperpage{8}
+  \item {addRacer}
+    \subitem {LeaderBoard}, \hyperpage{10}
+
+  \indexspace
+
+  \item {checkPosInt}
+    \subitem {main.cpp}, \hyperpage{16}
+  \item {current}
+    \subitem {LeaderBoard}, \hyperpage{11}
+
+  \indexspace
+
+  \item {dice}
+    \subitem {DiceQueue}, \hyperpage{8}
+  \item {DiceQueue}, \hyperpage{7}
+    \subitem {$\sim$DiceQueue}, \hyperpage{7}
+    \subitem {addDice}, \hyperpage{8}
+    \subitem {dice}, \hyperpage{8}
+    \subitem {DiceQueue}, \hyperpage{7}
+    \subitem {getDice}, \hyperpage{8}
+    \subitem {items}, \hyperpage{8}
+    \subitem {lock}, \hyperpage{8}
+
+  \indexspace
+
+  \item {gameMaster}
+    \subitem {main.cpp}, \hyperpage{17}
+  \item {getDice}
+    \subitem {DiceQueue}, \hyperpage{8}
+  \item {getPlace}
+    \subitem {LeaderBoard}, \hyperpage{10}
+
+  \indexspace
+
+  \item {ioLock}
+    \subitem {main.cpp}, \hyperpage{18}
+  \item {items}
+    \subitem {DiceQueue}, \hyperpage{8}
+
+  \indexspace
+
+  \item {LeaderBoard}, \hyperpage{9}
+    \subitem {$\sim$LeaderBoard}, \hyperpage{10}
+    \subitem {addRacer}, \hyperpage{10}
+    \subitem {current}, \hyperpage{11}
+    \subitem {getPlace}, \hyperpage{10}
+    \subitem {LeaderBoard}, \hyperpage{9}
+    \subitem {raceFinished}, \hyperpage{10}
+    \subitem {racers}, \hyperpage{11}
+    \subitem {results}, \hyperpage{11}
+    \subitem {s}, \hyperpage{11}
+  \item {lock}
+    \subitem {DiceQueue}, \hyperpage{8}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{17}
+  \item {main.cpp}
+    \subitem {checkPosInt}, \hyperpage{16}
+    \subitem {gameMaster}, \hyperpage{17}
+    \subitem {ioLock}, \hyperpage{18}
+    \subitem {main}, \hyperpage{17}
+    \subitem {moveMessage}, \hyperpage{17}
+    \subitem {racer}, \hyperpage{18}
+    \subitem {randomSleep}, \hyperpage{18}
+    \subitem {startMessage}, \hyperpage{18}
+    \subitem {stopMessage}, \hyperpage{18}
+  \item {moveMessage}
+    \subitem {main.cpp}, \hyperpage{17}
+
+  \indexspace
+
+  \item {raceFinished}
+    \subitem {LeaderBoard}, \hyperpage{10}
+  \item {racer}
+    \subitem {main.cpp}, \hyperpage{18}
+  \item {racers}
+    \subitem {LeaderBoard}, \hyperpage{11}
+  \item {randomSleep}
+    \subitem {main.cpp}, \hyperpage{18}
+  \item {results}
+    \subitem {LeaderBoard}, \hyperpage{11}
+
+  \indexspace
+
+  \item {s}
+    \subitem {LeaderBoard}, \hyperpage{11}
+  \item {semaphore}, \hyperpage{12}
+  \item {src/dicequeue.cpp}, \hyperpage{13}
+  \item {src/dicequeue.h}, \hyperpage{13, 14}
+  \item {src/leaderboard.cpp}, \hyperpage{14}
+  \item {src/leaderboard.h}, \hyperpage{15}
+  \item {src/main.cpp}, \hyperpage{16}
+  \item {src/semaphore.h}, \hyperpage{19}
+  \item {startMessage}
+    \subitem {main.cpp}, \hyperpage{18}
+  \item {stopMessage}
+    \subitem {main.cpp}, \hyperpage{18}
+
+\end{theindex}

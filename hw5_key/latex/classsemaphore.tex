@@ -1,0 +1,32 @@
+\hypertarget{classsemaphore}{}\doxysection{semaphore Class Reference}
+\label{classsemaphore}\index{semaphore@{semaphore}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsemaphore_a3e8a3996abf01bc1c8cedf365815a587}\label{classsemaphore_a3e8a3996abf01bc1c8cedf365815a587}} 
+{\bfseries semaphore} (unsigned int size)
+\item 
+\mbox{\Hypertarget{classsemaphore_af2ec5db723f37e078040a763cd51ece8}\label{classsemaphore_af2ec5db723f37e078040a763cd51ece8}} 
+void {\bfseries signal} ()
+\item 
+\mbox{\Hypertarget{classsemaphore_a4a9497728a40405ad5365f84ff455dba}\label{classsemaphore_a4a9497728a40405ad5365f84ff455dba}} 
+void {\bfseries wait} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classsemaphore_a1bf813d3e098cb3d2114dcf332e948b3}\label{classsemaphore_a1bf813d3e098cb3d2114dcf332e948b3}} 
+unsigned int {\bfseries counter}
+\item 
+\mbox{\Hypertarget{classsemaphore_aab41af8187caae4223561b06b5b5169f}\label{classsemaphore_aab41af8187caae4223561b06b5b5169f}} 
+std\+::mutex {\bfseries my\+Lock}
+\item 
+\mbox{\Hypertarget{classsemaphore_a7de907b1041c1b0bfb8265632cee30c5}\label{classsemaphore_a7de907b1041c1b0bfb8265632cee30c5}} 
+std\+::condition\+\_\+variable {\bfseries my\+Cond}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/semaphore.\+h\item 
+src/semaphore.\+cpp\end{DoxyCompactItemize}
